@@ -8,12 +8,9 @@ var Answer = function() {
 
 Answer.prototype.init = function() {
   var Box = new TreasureBox();
-  this.target = document.getElementById('target');
   var ans = this.getTresuerCount(Box.getTresureBox());
-  if(Box.checkTresureCount(ans)) {
-    this.log('正解！');
-  } else {
-    this.log('間違い！');
+  if(!Box.checkTresureCount(ans)) {
+    alert('間違い！');
   }
 };
 

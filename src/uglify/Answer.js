@@ -8,24 +8,12 @@ var Answer = function() {
 
 Answer.prototype.init = function() {
   var Box = new TreasureBox();
-  this.target = document.getElementById('target');
   var ans = this.getTresuerCount(Box.getTresureBox());
-  if(Box.checkTresureCount(ans)) {
-    this.log('正解！');
-  } else {
-    this.log('間違い！');
+  if(!Box.checkTresureCount(ans)) {
+    alert('間違い！');
   }
 };
 
-
-/**
- * @param {string} log .
- */
-Answer.prototype.log = function(log) {
-  var p = document.createElement('p');
-  p.innerText = log;
-  this.target.appendChild(p);
-};
 
 /**
  * @param {Array} obj
