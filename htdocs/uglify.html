@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<META http-equiv="Content-Type" content="text/html; charset=utf8">
+<title></title>
+</head>
+<body>
+<div id='target' align="center"></div>
+<script src='../dist/uglify_build.js'></script>
+<script>
+(function(d) {
+var p = d.createElement(p);
+p.innerText = '経過時間：' + (+new Date() - performance.timing.responseStart) + 'ms';
+d.getElementById('target').appendChild(p);
+})(document);
+</script>
+</body>
+</html>
